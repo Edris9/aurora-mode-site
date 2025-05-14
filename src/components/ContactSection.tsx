@@ -61,7 +61,7 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  {contactInfo.github}
+                  GitHub
                 </a>
               </div>
             )}
@@ -70,12 +70,12 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
               <div className="flex items-center space-x-3 p-3 rounded-lg border border-border hover:border-primary transition-colors duration-300">
                 <Linkedin className="h-5 w-5 text-primary" />
                 <a 
-                  href={`https://linkedin.com/in/${contactInfo.linkedin}`} 
+                  href={`https://www.linkedin.com/in/${contactInfo.linkedin}`} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors truncate"
                 >
-                  {contactInfo.linkedin}
+                  LinkedIn
                 </a>
               </div>
             )}

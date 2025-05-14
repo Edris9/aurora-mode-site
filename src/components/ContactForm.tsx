@@ -40,13 +40,19 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // In a real application, you would send this data to a server
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Meddelande från ${data.name}`);
+      const body = encodeURIComponent(
+        `Namn: ${data.name}\nE-post: ${data.email}\n\nMeddelande:\n${data.message}`
+      );
+      
+      // Open mail client with pre-filled data
+      window.location.href = `mailto:edriskohestani1010@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Log for debugging
       console.log("Form submitted:", data);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast.success("Tack för ditt meddelande! Jag återkommer så snart som möjligt.");
+      toast.success("Tack för ditt meddelande! Din e-postklient öppnas nu.");
       form.reset();
     } catch (error) {
       toast.error("Ett fel uppstod. Försök igen senare.");

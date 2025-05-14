@@ -1,4 +1,3 @@
-
 export const programmingSkills = [
   {
     name: "n8n",
@@ -116,5 +115,6 @@ export const contactInfo = {
   email: "edriskohestani1010@gmail.com",
   phone: "0739387526",
   location: "Göteborg",
-  linkedin: "STUDENT PÅ PLUSHÖG SKOLAN"
+  github: "Edris9",
+  linkedin: "edris-kohestani-947252173"
 };
