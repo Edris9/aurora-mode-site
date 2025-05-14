@@ -142,7 +142,7 @@ const Index = () => {
         <ProfileSection 
           name="Edris Kohestani" 
           title="Python Utvecklare & AI Expert" 
-          imageSrc="/placeholder.svg" 
+          imageSrc="/lovable-uploads/33f6fa3c-3875-4821-8c9a-481405473ee1.png" 
         />
         
         <div className="space-y-20 mt-12">
@@ -163,19 +163,23 @@ const Index = () => {
             </Card>
           </section>
           
+          {/* Experience Section */}
+          <section className="animate-scale-in">
+            <CVSection title="Erfarenhet" items={experience} />
+          </section>
+          
           {/* Programming Skills Section */}
           <section className="animate-scale-in">
             <h2 className="text-2xl font-bold text-gradient mb-6">Programmeringskunskaper</h2>
             <SkillAccordion skills={programmingSkills} />
           </section>
           
-          {/* Experience & Education Sections */}
-          <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 animate-scale-in">
-            <CVSection title="Erfarenhet" items={experience} />
+          {/* Education Section */}
+          <section className="animate-scale-in">
             <CVSection title="Utbildning" items={education} />
           </section>
           
-          {/* Languages & Contact Sections */}
+          {/* Languages & Other Skills Sections */}
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 animate-scale-in">
             <CVSection title="Språk" items={languages} />
             <div className="bg-card p-6 rounded-lg border border-border">
