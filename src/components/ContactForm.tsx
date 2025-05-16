@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Namn måste vara minst 2 tecken" }),
@@ -26,6 +27,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t } = useLanguage();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -71,9 +73,9 @@ const ContactForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Namn</FormLabel>
+                <FormLabel>{t("name")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="Ditt namn" {...field} />
+                  <Input placeholder={t("name")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -85,9 +87,9 @@ const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>E-post</FormLabel>
+                <FormLabel>{t("email")}</FormLabel>
                 <FormControl>
-                  <Input placeholder="din.epost@exempel.se" {...field} />
+                  <Input placeholder={t("email")} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -99,10 +101,10 @@ const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Meddelande</FormLabel>
+                <FormLabel>{t("message")}</FormLabel>
                 <FormControl>
                   <Textarea 
-                    placeholder="Skriv ditt meddelande här..." 
+                    placeholder={t("message")} 
                     className="min-h-[120px]" 
                     {...field} 
                   />
@@ -117,7 +119,7 @@ const ContactForm = () => {
             className="w-full md:w-auto"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Skickar..." : "Skicka meddelande"}
+            {isSubmitting ? "Skickar..." : t("send")}
           </Button>
         </form>
       </Form>

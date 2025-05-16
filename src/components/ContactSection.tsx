@@ -1,6 +1,7 @@
 
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import ContactForm from "./ContactForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ContactInfo {
   email?: string;
@@ -15,15 +16,16 @@ interface ContactSectionProps {
 }
 
 const ContactSection = ({ contactInfo }: ContactSectionProps) => {
+  const { t } = useLanguage();
+  
   return (
     <div className="space-y-8">
-      <h2 className="text-2xl font-bold text-gradient">Kontakt</h2>
+      <h2 className="text-2xl font-bold text-gradient">{t("contact")}</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-6">
           <p className="text-muted-foreground">
-            Har du en fråga eller vill diskutera ett potentiellt samarbete? 
-            Fyll i formuläret eller kontakta mig direkt via informationen nedan.
+            {t("contactQuestion")}
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -83,7 +85,7 @@ const ContactSection = ({ contactInfo }: ContactSectionProps) => {
         </div>
         
         <div className="bg-card rounded-lg p-6 border border-border shadow-sm">
-          <h3 className="text-xl font-semibold mb-4">Skicka ett meddelande</h3>
+          <h3 className="text-xl font-semibold mb-4">{t("sendMessage")}</h3>
           <ContactForm />
         </div>
       </div>

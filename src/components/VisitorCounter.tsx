@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import { Globe, BarChart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const VisitorCounter = () => {
   const [visitors, setVisitors] = useState<number>(0);
   const [country, setCountry] = useState<string>("");
+  const { t } = useLanguage();
 
   useEffect(() => {
     // Get visitor count from localStorage or initialize
@@ -40,7 +42,7 @@ const VisitorCounter = () => {
         <div className="flex items-center gap-2">
           <BarChart className="h-5 w-5 text-primary" />
           <span className="text-sm font-medium">
-            {visitors} {visitors === 1 ? "besökare" : "besökare"}
+            {visitors} {t("visitors")}
           </span>
         </div>
         {country && (
