@@ -1,5 +1,6 @@
 
 import ThemeToggle from "./ThemeToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ProfileSectionProps {
   name: string;
@@ -8,6 +9,8 @@ interface ProfileSectionProps {
 }
 
 const ProfileSection = ({ name, title, imageSrc = "/placeholder.svg" }: ProfileSectionProps) => {
+  const { t } = useLanguage();
+  
   return (
     <div className="flex flex-col items-center text-center space-y-4 my-10">
       <div className="relative">
@@ -24,7 +27,7 @@ const ProfileSection = ({ name, title, imageSrc = "/placeholder.svg" }: ProfileS
       </div>
       <div className="space-y-2">
         <h1 className="text-3xl sm:text-4xl font-bold">{name}</h1>
-        <h2 className="text-2xl font-semibold text-gradient">{title}</h2>
+        <h2 className="text-2xl font-semibold text-gradient">{t("pythonDeveloperTitle")}</h2>
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ const Index = () => {
         
         <ProfileSection 
           name="Edris Kohestani" 
-          title="Python Utvecklare & AI Expert" 
+          title={t("pythonDeveloperTitle")} 
           imageSrc="/lovable-uploads/33f6fa3c-3875-4821-8c9a-481405473ee1.png" 
         />
         

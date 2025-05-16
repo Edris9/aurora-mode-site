@@ -11,7 +11,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Basic translations
+// Comprehensive translations for the entire site
 const translations: Record<Language, Record<string, string>> = {
   sv: {
     "language": "Språk",
@@ -28,7 +28,14 @@ const translations: Record<Language, Record<string, string>> = {
     "email": "E-post",
     "message": "Meddelande",
     "send": "Skicka",
-    "contactQuestion": "Har du en fråga eller vill diskutera ett potentiellt samarbete? Fyll i formuläret eller kontakta mig direkt via informationen nedan."
+    "contactQuestion": "Har du en fråga eller vill diskutera ett potentiellt samarbete? Fyll i formuläret eller kontakta mig direkt via informationen nedan.",
+    "pythonDeveloperTitle": "Python Utvecklare & AI Expert",
+    "problemSolver": "Problemlösare",
+    "creative": "Kreativ",
+    "plantGrowing": "Växtodling",
+    "exercise": "Träning",
+    "driverLicense": "Körkortsinnehavare AM/B",
+    "sending": "Skickar..."
   },
   en: {
     "language": "Language",
@@ -45,7 +52,14 @@ const translations: Record<Language, Record<string, string>> = {
     "email": "Email",
     "message": "Message",
     "send": "Send",
-    "contactQuestion": "Have a question or want to discuss a potential collaboration? Fill out the form or contact me directly via the information below."
+    "contactQuestion": "Have a question or want to discuss a potential collaboration? Fill out the form or contact me directly via the information below.",
+    "pythonDeveloperTitle": "Python Developer & AI Expert",
+    "problemSolver": "Problem Solver",
+    "creative": "Creative",
+    "plantGrowing": "Plant Growing",
+    "exercise": "Exercise",
+    "driverLicense": "Driver's License AM/B",
+    "sending": "Sending..."
   },
   de: {
     "language": "Sprache",
@@ -62,7 +76,14 @@ const translations: Record<Language, Record<string, string>> = {
     "email": "E-Mail",
     "message": "Nachricht",
     "send": "Senden",
-    "contactQuestion": "Haben Sie eine Frage oder möchten Sie eine potenzielle Zusammenarbeit besprechen? Füllen Sie das Formular aus oder kontaktieren Sie mich direkt über die untenstehenden Informationen."
+    "contactQuestion": "Haben Sie eine Frage oder möchten Sie eine potenzielle Zusammenarbeit besprechen? Füllen Sie das Formular aus oder kontaktieren Sie mich direkt über die untenstehenden Informationen.",
+    "pythonDeveloperTitle": "Python Entwickler & KI Experte",
+    "problemSolver": "Problemlöser",
+    "creative": "Kreativ",
+    "plantGrowing": "Pflanzenzucht",
+    "exercise": "Training",
+    "driverLicense": "Führerschein AM/B",
+    "sending": "Senden..."
   }
 };
 

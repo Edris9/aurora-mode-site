@@ -27,7 +27,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -54,10 +54,18 @@ const ContactForm = () => {
       // Log for debugging
       console.log("Form submitted:", data);
       
-      toast.success("Tack för ditt meddelande! Din e-postklient öppnas nu.");
+      const successMessage = language === 'sv' ? "Tack för ditt meddelande! Din e-postklient öppnas nu." :
+                            language === 'en' ? "Thank you for your message! Your email client is opening now." :
+                            "Vielen Dank für Ihre Nachricht! Ihr E-Mail-Client wird jetzt geöffnet.";
+                            
+      toast.success(successMessage);
       form.reset();
     } catch (error) {
-      toast.error("Ett fel uppstod. Försök igen senare.");
+      const errorMessage = language === 'sv' ? "Ett fel uppstod. Försök igen senare." :
+                          language === 'en' ? "An error occurred. Please try again later." :
+                          "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.";
+                          
+      toast.error(errorMessage);
       console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
@@ -119,7 +127,7 @@ const ContactForm = () => {
             className="w-full md:w-auto"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Skickar..." : t("send")}
+            {isSubmitting ? t("sending") : t("send")}
           </Button>
         </form>
       </Form>
