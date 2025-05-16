@@ -49,7 +49,7 @@ const Index = () => {
         
         <div className="space-y-20 mt-12">
           {/* About Me Section */}
-          <AboutSection aboutText="" />
+          <AboutSection />
           
           {/* Experience Section */}
           <section className="animate-scale-in">

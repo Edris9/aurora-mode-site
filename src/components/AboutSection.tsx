@@ -2,11 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-interface AboutSectionProps {
-  aboutText: string;
-}
-
-const AboutSection = ({ aboutText }: AboutSectionProps) => {
+const AboutSection = () => {
   const { t } = useLanguage();
   
   return (
