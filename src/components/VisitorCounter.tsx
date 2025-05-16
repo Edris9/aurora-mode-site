@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Globe, Counter } from "lucide-react";
+import { Globe, BarChart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const VisitorCounter = () => {
@@ -38,7 +38,7 @@ const VisitorCounter = () => {
     <Card className="bg-card/50 backdrop-blur-sm border border-border">
       <CardContent className="flex items-center justify-between p-4">
         <div className="flex items-center gap-2">
-          <Counter className="h-5 w-5 text-primary" />
+          <BarChart className="h-5 w-5 text-primary" />
           <span className="text-sm font-medium">
             {visitors} {visitors === 1 ? "besökare" : "besökare"}
           </span>

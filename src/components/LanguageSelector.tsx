@@ -1,5 +1,5 @@
 
-import { Language } from "lucide-react";
+import { Languages } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -8,7 +8,7 @@ const LanguageSelector = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Language className="h-5 w-5 text-primary" />
+      <Languages className="h-5 w-5 text-primary" />
       <Select
         value={language}
         onValueChange={(value) => setLanguage(value as "sv" | "en" | "de")}
