@@ -14,7 +14,6 @@ import {
   education, 
   experience, 
   languages, 
-  aboutMe, 
   contactInfo 
 } from "@/data/profileData";
 
@@ -50,7 +49,7 @@ const Index = () => {
         
         <div className="space-y-20 mt-12">
           {/* About Me Section */}
-          <AboutSection aboutText={aboutMe} />
+          <AboutSection aboutText="" />
           
           {/* Experience Section */}
           <section className="animate-scale-in">

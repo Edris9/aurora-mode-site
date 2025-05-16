@@ -35,7 +35,8 @@ const translations: Record<Language, Record<string, string>> = {
     "plantGrowing": "Växtodling",
     "exercise": "Träning",
     "driverLicense": "Körkortsinnehavare AM/B",
-    "sending": "Skickar..."
+    "sending": "Skickar...",
+    "aboutText": "Min resa i Sverige började den 29:e november 2016, och sedan dess har jag drivits av en stark vilja att utvecklas och ta vara på nya möjligheter. Jag är målmedveten, nyfiken och har en positiv inställning till utmaningar. Med ett stort intresse för AI och programmering strävar jag efter att utveckla innovativa AI-modeller. Utöver mitt tekniska engagemang uppskattar jag samarbete och problemlösning. Jag har även en passion för växtodling och träning, vilket speglar min kreativitet."
   },
   en: {
     "language": "Language",
@@ -59,7 +60,8 @@ const translations: Record<Language, Record<string, string>> = {
     "plantGrowing": "Plant Growing",
     "exercise": "Exercise",
     "driverLicense": "Driver's License AM/B",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "aboutText": "My journey in Sweden began on November 29, 2016, and since then I have been driven by a strong desire to develop and seize new opportunities. I am determined, curious, and have a positive attitude towards challenges. With a great interest in AI and programming, I strive to develop innovative AI models. Beyond my technical engagement, I appreciate collaboration and problem-solving. I also have a passion for plant cultivation and exercise, which reflects my creativity."
   },
   de: {
     "language": "Sprache",
@@ -83,7 +85,8 @@ const translations: Record<Language, Record<string, string>> = {
     "plantGrowing": "Pflanzenzucht",
     "exercise": "Training",
     "driverLicense": "Führerschein AM/B",
-    "sending": "Senden..."
+    "sending": "Senden...",
+    "aboutText": "Meine Reise in Schweden begann am 29. November 2016, und seitdem bin ich von einem starken Willen getrieben, mich weiterzuentwickeln und neue Möglichkeiten zu nutzen. Ich bin zielstrebig, neugierig und habe eine positive Einstellung zu Herausforderungen. Mit einem großen Interesse an KI und Programmierung strebe ich danach, innovative KI-Modelle zu entwickeln. Neben meinem technischen Engagement schätze ich Zusammenarbeit und Problemlösung. Ich habe auch eine Leidenschaft für Pflanzenbau und Sport, was meine Kreativität widerspiegelt."
   }
 };
 
