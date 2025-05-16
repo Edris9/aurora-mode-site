@@ -6,6 +6,9 @@ import AboutSection from "@/components/AboutSection";
 import CVSection from "@/components/CVSection";
 import ContactSection from "@/components/ContactSection";
 import OtherSkillsSection from "@/components/OtherSkillsSection";
+import VisitorCounter from "@/components/VisitorCounter";
+import LanguageSelector from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   programmingSkills, 
   education, 
@@ -17,6 +20,7 @@ import {
 
 const Index = () => {
   const [mounted, setMounted] = useState(false);
+  const { t } = useLanguage();
 
   // This ensures theme-related code only runs after component is mounted
   useEffect(() => {
@@ -33,6 +37,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 py-10">
+        <div className="flex justify-between items-center mb-8">
+          <VisitorCounter />
+          <LanguageSelector />
+        </div>
+        
         <ProfileSection 
           name="Edris Kohestani" 
           title="Python Utvecklare & AI Expert" 
@@ -45,7 +54,7 @@ const Index = () => {
           
           {/* Experience Section */}
           <section className="animate-scale-in">
-            <CVSection title="Erfarenhet" items={experience} />
+            <CVSection title={t("experience")} items={experience} />
           </section>
           
           {/* Programming Skills Section */}
@@ -53,12 +62,12 @@ const Index = () => {
           
           {/* Education Section */}
           <section className="animate-scale-in">
-            <CVSection title="Utbildning" items={education} />
+            <CVSection title={t("education")} items={education} />
           </section>
           
           {/* Languages & Other Skills Sections */}
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 animate-scale-in">
-            <CVSection title="Språk" items={languages} />
+            <CVSection title={t("languages")} items={languages} />
             <OtherSkillsSection skills={otherSkills} />
           </section>
           
